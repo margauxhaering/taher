@@ -25,6 +25,24 @@ font & reset css
 reset
 ---------------------------------------------
 */
+
+.fade-in {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+    animation: fadeOut 2s ease forwards;
+}
+
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
@@ -735,7 +753,7 @@ Banner Style
   background-position: center center;
   background-size: cover;
   padding-top: 290px;
-  padding-bottom: 240px;
+  padding-bottom: 120px;
   background-color: #2a2a2a;
 }
 
@@ -813,7 +831,7 @@ Banner Style
   font-size: 24px;
   display: inline-block;
   color: #BADAF5;
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 50%;
   opacity: 1;
   transition: all .3s;
@@ -836,7 +854,7 @@ Categories & Collections Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 120px 0px 150px 0px;
+  padding: 10px 0px 150px 0px;
   position: relative;
 }
 
@@ -877,6 +895,14 @@ Categories & Collections Style
   font-size: 20px;
 }
 
+.categories .item a{
+  color:#fff;
+}
+.categories .item a:hover {
+  color: #BADAF5;
+}
+
+
 .categories .item .icon-button a {
   display: inline-block;
   width: 46px;
@@ -906,7 +932,7 @@ Categories & Collections Style
 }
 
 .collections {
-  margin-top: 140px;
+  margin-top: 100px;
 }
 
 .collections .item img {
@@ -1001,6 +1027,46 @@ Categories & Collections Style
 .collections .owl-nav .owl-next span:hover {
   opacity: 1;
 }
+
+.categories .owl-nav {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50px);
+  text-align: center;
+}
+
+.categories .owl-nav .owl-prev {
+  position: absolute;
+  left: -23px;
+}
+
+.categories .owl-nav .owl-next {
+  position: absolute;
+  right: -23px;
+}
+
+.categories .owl-nav .owl-prev span,
+.categories .owl-nav .owl-next span  {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 24px;
+  display: inline-block;
+  color: #BADAF5;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all .3s;
+}
+
+.categories .owl-nav .owl-prev span:hover,
+.categories .owl-nav .owl-next span:hover {
+  opacity: 1;
+}
+
+
 
 
 
@@ -1723,6 +1789,190 @@ Explore Style
   text-align: center;
 }
 
+
+/*
+---------------------------------------------
+Author Page Style
+---------------------------------------------
+*/
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  background-color: black;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.author-page {
+  background-image: url(../images/dark-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 200px 0px 120px 0px;
+  position: relative;
+}
+
+.author-page .author {
+  display: flex;
+}
+
+.author-page .author h4 {
+  margin-top: 60px;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.author-page .author h4 a {
+  font-size: 15px;
+  color: #7453fc;
+}
+
+.author-page .right-info {
+  background-color: #282b2f;
+  border: 1px solid #404245;
+  padding: 20px 30px;
+  border-radius: 20px;
+  margin-left: 100px;
+}
+
+.author-page .right-info .info-item {
+  margin-bottom: 20px;
+}
+
+.author-page .right-info i {
+  color: #7453fc;
+  font-size: 22px;
+}
+
+.author-page .right-info h6 {
+  font-size: 20px;
+  color: #7453fc;
+  margin-top: 4px;
+}
+
+.author-page .right-info h6 em {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+}
+
+.author-page .right-info h5 {
+  font-size: 20px;
+  color: #afafaf;
+  margin-top: 10px;
+}
+
+.author-page .right-info .main-button a {
+  width: 100%;
+  text-align: center;
+}
+
+.author-page .section-heading {
+  margin-top: 80px;
+  text-align: left;
+}
+
+.author-page .section-heading .line-dec {
+  margin-left: 0;
+}
+
+.author-page .item span.author {
+  display: inline-flex;
+  width: 100%;
+}
+
+.author-page .item span.author img {
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.author-page .item img {
+  margin-top: -32px;
+  position: relative;
+  z-index: 1;
+}
+
+.author-page .item h4 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.author-page .item .line-dec {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255,255,255,0.2);
+  margin: 30px 0px;
+}
+
+.author-page .item {
+  background-color: #282b2f;
+  border: 1px solid #404245;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: 52px;
+}
+
+.author-page .item span {
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.author-page .item span strong {
+  font-size: 20px;
+}
+
+.author-page .item span.category {
+  text-align: right;
+}
+
+.author-page .item .main-button {
+  margin-top: 20px;
+  margin-bottom: -60px;
+  text-align: center;
+}
+
+
+
 /*
 ---------------------------------------------
 Responsive Style
@@ -1802,8 +2052,4 @@ body {
     margin-left: 0px;
     margin-top: 30px;
   }
-}
-
-@media (max-width: 1200px) {
-
 }

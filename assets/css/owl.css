@@ -46,9 +46,21 @@
     -webkit-backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none; }
-  .owl-carousel .owl-item img {
-    display: block;
-    width: 100%;}
+
+    .owl-carousel .item .icon {
+      width: 62px;
+      height: 62px;
+      display: inline-block;
+      text-align: center;
+      line-height: 62px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    .owl-carousel .item .icon img {
+      max-width: 50px;
+    }
+
   .owl-carousel .owl-nav.disabled,
   .owl-carousel .owl-dots.disabled {
     display: none; }

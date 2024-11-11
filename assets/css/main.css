@@ -2004,8 +2004,8 @@ timeline cv
 
 .timeline-container {
   position: relative;
-  width: 80%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 1000px;
   padding: 20px;
   padding-top: 50px;
 }
@@ -2035,7 +2035,7 @@ timeline cv
 .timeline-content {
   display: flex;
   align-items: center;
-  width: calc(50% - 40px);
+  width: calc(50% - 30px);
 }
 
 .timeline-bubble {
@@ -2060,7 +2060,7 @@ timeline cv
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .timeline-info h4 {

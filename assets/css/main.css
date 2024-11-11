@@ -1996,7 +1996,83 @@ Author Page Style
 }
 
 
+/*
+---------------------------------------------
+timeline cv
+---------------------------------------------
+*/
 
+.timeline-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #BADAF5;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* For Odd Items (Position on the Right of the Line) */
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-content {
+  display: flex;
+  align-items: center;
+  width: calc(50% - 40px);
+}
+
+.timeline-bubble {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #BADAF5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-info {
+  background-color: transparent;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.timeline-info h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #BADAF5;
+}
+
+.timeline-info p {
+  font-size: 14px;
+  color: #666;
+}
 /*
 ---------------------------------------------
 Responsive Style

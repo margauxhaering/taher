@@ -57,7 +57,6 @@
                         <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="lsd.html">La Science documentée</a></li>
                         <li><a href="cv.html">A propos</a></li>
-                        <li><a href="#">Contact</a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -84,7 +83,7 @@
                 <a href="#publi">Recherche</a>
               </div>
               <div class="main-button">
-                <a href="#reseaux">Réseaux sociaux</a>
+                <a style="color:#fff;"href="#reseaux">Réseaux sociaux</a>
               </div>
             </div>
           </div>
@@ -126,8 +125,8 @@
 d’images appliquées aux protéines </h4>
 <span>Bio-informatique et Vision par ordinateur, CNAM,
 Post-Doctorat, 2024-2026</span>
-                      <div class="main-button">
-                        <a href="#">Ma référence</a>
+                      <div class="main-button" onclick="Details('1')">
+                        En détails
                       </div>
                     </div>
                   </div>
@@ -138,8 +137,8 @@ Post-Doctorat, 2024-2026</span>
 des complexes protéine-protéine</h4>
                       <span>Bio-informatique et Vision par ordinateur, CNAM,
 Post-Doctorat, 2024-2026</span>
-                      <div class="main-button">
-                        <a href="#">Ma référence</a>
+                      <div class="main-button" onclick="Details('2')">
+                        En détails
                       </div>
                     </div>
                   </div>
@@ -149,12 +148,29 @@ Post-Doctorat, 2024-2026</span>
                       <h4>Développement algorithmique, implémentation et évaluations
 de programmes de modélisations 3D de molécules ARNs basées sur approche par
 fragments</h4>
-<span>Informatique et Algorithmie, LIX, Doctorant, 2020-2024</span>
-                      <div class="main-button">
-                        <a href="#">Ma référence</a>
+<span>Informatique et Algorithmie, LIX <br>Doctorant, 2020-2024</span>
+                      <div class="main-button" onclick="Details('3')">
+                        En détails
                       </div>
                     </div>
                   </div>
+                  <div class="item">
+                    <img src="assets/images/algo.jpg" alt="">
+                    <div class="down-content">
+                      <h4>Etudes de la protéine Beta-Sécrétase 1 impliquée dans la
+maladie d’Alzheimer et modélisation de molécules thérapeutiques par
+ColorDocking</h4>
+<span>Bio-informatique et Modélisation Moléculaire, I2BC <br>Doctorant, 2020-2024</span>
+                      <div class="main-button" onclick="Details('4')">
+                        En détails
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="detailspanel" id="detailspanel">
+                  <p class="empty"></p>
                 </div>
               </div>
             </div>
@@ -240,12 +256,28 @@ fragments</h4>
                 </div>
               </div>
 
-              <div class="col-lg-8 col-sm-6">
-                <div style="color:#fff;"> <strong> Enseignant vacataire</strong> <br><i>  - Conservatoire National des Arts et Métiers (CNAM), Paris <br>  - Université de Windsor, Faculté d’Informatique, Ontario, Canada <br>  - Université Paris-Saclay, Faculté de Pharmacie, Paris </i>
-                  <br><br> <b> Volume horaire total</b> : 184 HETD
-                  <br><br> <b> Discipline/ Matières</b> : Bioinformatique structurale, Informatique, Ingénierie logicielle
-appliquée, Chimie Médicinale, Modélisation Moléculaire
-                  <br><br> <b> Niveau</b> : 3ème année DFGSP3 et Master
+              <div class="col-lg-4">
+                <div style="color:#fff;"> <strong> Enseignant vacataire</strong> <br><i>Conservatoire National des Arts et Métiers (CNAM)<br> Paris, France </i>
+                  <br><br> <b> Volume horaire </b> : 60 HETD
+                  <br><br> <b> Discipline/ Matières</b> : <br>Bioinformatique structurale
+                  <br><br> <b> Nature </b> : Cours magistraux
+                  <br><br> <b> Niveau</b> : Equivalence Master
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div style="color:#fff;"> <strong> Enseignant-Associé Bénévolat </strong> <br><i>Université de Windsor, Faculté d’Informatique<br> Ontario, Canada</i>
+                  <br><br> <b> Volume horaire</b> : 60 HETD
+                  <br><br> <b> Discipline/ Matières</b> : <br>Informatique, Ingénierie logicielle appliquée
+                  <br><br> <b> Nature </b> : Travaux pratiques
+                  <br><br> <b> Niveau</b> : Master
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div style="color:#fff;"> <strong> Enseignant vacataire</strong> <br><i>Université Paris-Saclay, Faculté de Pharmacie<br> Paris, France </i>
+                  <br><br> <b> Volume horaire</b> : 64 HETD
+                  <br><br> <b> Discipline/ Matières</b> :<br> Chimie Médicinale, Modélisation Moléculaire
+                  <br><br> <b> Nature </b> : Travaux pratiques
+                  <br><br> <b> Niveau</b> : 3ème année DFGSP3
                 </div>
               </div>
             </div>
@@ -380,6 +412,137 @@ appliquée, Chimie Médicinale, Modélisation Moléculaire
               fadeDiv.remove();
           });
       });
+
+
+
+      function Details(eventId) {
+        const detailsPanel = document.getElementById('detailspanel');
+
+        if (eventId == '1') {
+          detailsPanel.innerHTML = `
+            <h2>Evaluation et développement de méthodes de classifications
+d’images appliquées aux protéines</h2><br><br>
+            <p>
+            La classification d’objets 3D non-rigides est un champ de recherche central
+dans le domaine de vision par ordinateur. Parmi les champs d’application, nous pouvons citer
+la reconnaissance et classification des protéines. Une protéine peut être définie par une
+séquence de lettres 1D (séquence) associée à une forme 3D (conformère). C’est un objet
+extrêmement dynamique auquel plusieurs conformères différentes peuvent être associé à une
+seule séquence.
+<br><br>Cette application trouve particulièrement un intérêt en conception de médicaments pour la
+prévention d'effets secondaires (par l’identification de protéines distants d’un point de vue de
+l’évolution) par exemple, ou en biologie cellulaire et structurale pour une meilleure
+compréhension des processus biologique et pathologique.
+Des études ont montré certaines difficultés que peuvent rencontrer les algorithmes dans la
+classification des protéines 3D, sur des jeux de données restreintes. Nous pouvons citer la
+difficulté à classifier correctement des protéines distinctes (séquences différentes) partageant
+des formes similaires, ou encore de la difficulté de classification d'objets basés uniquement
+sur la forme (sans information atomiques et physicochimiques).
+<br><br>L’objectif de ce projet de recherche est double. Le premier consiste à comprendre les limites
+d’un ensemble d’algorithmes (pouvant être basé ou non sur l’apprentissage) appliqués sur
+un jeu de données plus large, se devant être à la fois réaliste et difficile selon la biologie. Les
+résultats obtenus permettront d’avoir une meilleure compréhension des points forts et points
+faibles des algorithmes existants, mais également de mieux cerner la difficulté induite par la
+biologie.
+<br><br>A partir de ce constat, le deuxième objectif consiste à optimiser les performances des
+algorithmes existants adaptés aux contextes protéiques, ou d’en développer, afin d’améliorer
+de manière significative la classification des protéines 3D. D’un point de vue de la biologie.
+Résultats : En cours. Prévision de soumission d’un papier fin 2024, et appel à participation
+au défi SHREC 2025
+<br><br><b>Financement</b> : ANR GRADIENT - https://gradient.projet.liris.cnrs.fr/
+            </p>
+          `;
+        }if (eventId == '2') {
+               detailsPanel.innerHTML = `
+                 <h2>Evaluation des méthodes de reconnaissances dans le cadre
+des complexes protéine-protéine</h2><br><br>
+                 <p>
+                 La reconnaissance des complexes protéines-protéines constitue un enjeu
+important, que ce soit dans la conception de médicaments ou dans la compréhension des
+mécanismes biologiques. On définit un complexe protéine-protéine comme étant deux
+protéines distinctes (et indépendantes) interagissant l’une avec l’autre. Dans le cadre de la
+Vision par ordinateur, le problème peut être ramené à la reconnaissance d’une image
+complète à partir d’une information partielle. Dans notre contexte, l’une des deux protéines
+constituerait celle-ci. On parlera alors d’un problème d’amarrage ou de complémentarité de
+formes. D’un point de vue de la disponibilité des données, peu de données sont existantes
+quand bien même un grand nombre de données de protéines seules existent. De ce constat,
+ce projet de recherche permettrait d’évaluer les algorithmes existants pour en permettre leur
+optimisation, et de prédire des complexes dont nous ne connaitrons l’existence due aux
+limitations des méthodes biologiques.
+<br><br>Résultats : En 2024, nous avons réalisé le premier jeu de données
+(https://shrec2024.drugdesign.fr/) avec une évaluation des performances de méthodes dans
+le cadre du défi communautaire SHREC. Les résultats ont montré des performances
+poussives, mais intéressantes selon une évaluation de différentes métriques.
+Particulièrement, la principale difficulté réside sur la prédiction de complémentarité de
+protéines pour lesquelles les formes ne sont optimalement pas emboitables. (DOI :
+10.2312:3dor.20241173).
+Une nouvelle étude, pour SHREC 2026, est à l’étude, avec un jeu de données enrichis et une
+évaluation d’un plus grand nombre d’algorithmes.
+<br><br><b>Financement </b>: ANR GRADIENT - https://gradient.projet.liris.cnrs.fr/
+                 </p>
+               `;
+             }if (eventId == '3') {
+                    detailsPanel.innerHTML = `
+                      <h2>Développement algorithmique, implémentation et évaluations
+de programmes de modélisations 3D de molécules ARNs basées sur approche par
+fragments </h2><br><br>
+                      <p>
+                      La conception d’ARNs thérapeutiques est un enjeu important dans le domaine
+de la conception de médicament. Cette conception peut s’approcher selon une approche par
+fragments, définie comme l’assemblage de fragment amarrées à la surface d’une protéine, et
+où chaque fragment constitue une petite molécule. La molécule optimale peut être vue comme
+la molécule énergétiquement stable (approchée comme la résultante de la somme des
+énergies de chaque fragment avec un bonus ou malus énergétique).
+D’un point de vue algorithmique, le problème se ramène à un problème de décision (dans
+le cas de la prédiction de la solution optimale) ou d’optimisation (dans le cadre d’une étude
+statistique) en supposant être à l’équilibre thermodynamique et à partir d’une très grande
+bibliothèque de fragments. Ainsi, le problème se relève être trop difficile pour être résolu par
+une énumération force-brute selon un coût raisonnable. Par ailleurs, d’un point de vue de la
+biologie, aucune méthode n’existait à ce moment pour la conception d’ARNs thérapeutiques
+nouvelles basée sur l’approche par fragments.
+<br><br><b>Résultats</b> : Nous avons développé une nouvelle approche probabiliste basée sur la revisite
+de l’algorithme du “Color-Coding” (Codage par couleurs). Cette approche, nommée
+ColorDocking, est codée en C (pour la partie de la programmation dynamique) et Python
+(pour les entrées/sorties des résultats), et constitue une première dans le cadre de la
+conception d’ARNs nouvelles. Nous avons démontré une reproductibilité des résultats malgré
+le côté probabiliste, une adaptabilité du programme à différentes fonctions de scores
+énergétiques et de définition d’un fragment, des résultats équivalents à une approche
+d’énumération force-brute, des performances en coût de calculs significativement meilleurs
+que l’approche par énumération et des performances intéressantes d’un point de vue du sens
+biologique.
+<br><br><b>DOI </b>: 10.1007/978-1-0716-3989-4_10 et hal-03816423v1
+<br><b>Git </b>: https://gitlab.inria.fr/amibio/colordocking
+<br><b>Financement </b>: Fondation Vaincre Alzheimer
+                      </p>
+                    `;
+                  }if (eventId == '4') {
+                         detailsPanel.innerHTML = `
+                           <h2>Etudes de la protéine Beta-Sécrétase 1 impliquée dans la
+maladie d’Alzheimer et modélisation de molécules thérapeutiques par
+ColorDocking</h2><br><br>
+                           <p>L'objectif de ce projet a consisté à appliquer le logiciel ColorDocking et à
+développer un protocole intégratif dans le cadre d’une application thérapeutique, la maladie
+d’Alzheimer. Cette maladie est un enjeu majeur de la santé publique, et pour laquelle plusieurs
+tentatives de traitement ciblant la protéine Beta-Sécrétase 1 ont échoué, pour des raisons
+d’efficacité ou de risques cliniques.
+Ce projet s’est divisé en deux phases complémentaires. La première a consisté à une étude
+structurale de la Beta-Sécrétase 1 et de la Beta-Sécrétase 2 (supposée être impliquée dans
+le diabète et dans un mécanisme de protection contre la maladie d’Alzheimer), afin d’obtenir
+des informations de spécificités et de sélectivité vis-à-vis des acides nucléiques (molécules
+de type ARNs/ADNs), pour lesquelles il n’existe peu de documentation. La seconde a consisté
+à modéliser des molécules en incluant ces informations et en utilisant l’approche du
+ColorDocking.
+<br><br><b>Résultats</b> : Nous avons pu établir des critères de spécificités et de sélectivités d’acides
+nucléiques par rapport à ces deux protéines. Un protocole intégratif entre l’Informatique, la
+Chimie et la Biologie a été défini et proposé. Une soumission pour fin 2024 ou 2025 est à
+prévoir.
+<br><br><b>HAL ID</b> : Tel-04538513
+                       </p>
+                         `;
+                       }
+      }
+
+
   </script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

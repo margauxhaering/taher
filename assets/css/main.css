@@ -1498,12 +1498,18 @@ Page Heading Style
 
 .page-heading::before {
   content: "";
+  background-image: url('../images/lsd.png');
+  background-size: 400px 400px;
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  opacity: 0.3;
+  z-index: 0;
 }
 
 .page-heading > * {
@@ -1663,7 +1669,7 @@ Explore Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 400px 0px 120px 0px;
+  padding: 250px 0px 120px 0px;
   position: relative;
 }
 

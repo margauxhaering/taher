@@ -176,15 +176,129 @@
           </div>
         </div>
       </div>
-      <div class="bubble">2024</div>
+      <div class="bubble">2025</div>
     </div>
-      <div class="timeline-item" onclick="showDetails('doc')">
+    <div class="timeline-item2 below-track" onclick="showDetails('vaccnam')">
+      <div class="timeline-content2">
+        <div class="timeline-info">
+          <div class="front">
+            <div>
+          <h4>Enseignant Vacataire</h4>
+          <p>CNAM</p>
+        </div>
+      </div>
+          <div class="back">
+            En savoir plus
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item2 below-track" onclick="showDetails('bene')">
+      <div class="timeline-content2">
+        <div class="timeline-info">
+          <div class="front">
+            <div>
+          <h4>Enseignant Bénévole</h4>
+          <p>Université de Windsor, Ontario, Canada</p>
+        </div>
+      </div>
+          <div class="back">
+            En savoir plus
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="timeline-event">
+        <div class="timeline-item" onclick="showDetails('doc')">
+          <div class="timeline-content">
+            <div class="timeline-info">
+              <div class="front">
+                <div>
+              <h4>Doctorat en Biochimie et Biologie Moléculaire</h4>
+              <p>LIX, I2BC, CNRS</p>
+            </div>
+          </div>
+              <div class="back">
+                En savoir plus
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bubble2">2024</div>
+      </div>
+
+      <div class="timeline-item2 below-track" onclick="showDetails('alz')">
+        <div class="timeline-content2">
+          <div class="timeline-info">
+            <div class="front">
+              <div>
+            <h4>Vaincre Alzheimer</h4>
+            <p>Juin 2023</p>
+          </div>
+        </div>
+            <div class="back">
+              En savoir plus
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item2 below-track" onclick="showDetails('these')">
+        <div class="timeline-content2">
+          <div class="timeline-info">
+            <div class="front">
+              <div>
+            <h4>Ma these en 180s</h4>
+            <p>Mai 2023</p>
+          </div>
+        </div>
+            <div class="back">
+              En savoir plus
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-event">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-info2">
+
+            </div>
+          </div>
+        </div>
+        <div class="bubble">2023</div>
+      </div>
+      <div class="timeline-item2" onclick="showDetails('vacPS')">
         <div class="timeline-content">
           <div class="timeline-info">
             <div class="front">
               <div>
-            <h4>Doctorat en Biochimie et Biologie Moléculaire</h4>
-            <p>LIX, I2BC, CNRS</p>
+            <h4>Enseignant Vacataire</h4>
+            <p>Université Paris-Saclay</p>
+          </div>
+        </div>
+            <div class="back">
+              En savoir plus
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-event">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-info2">
+
+            </div>
+          </div>
+        </div>
+        <div class="bubble">2022</div>
+      </div>
+      <div class="timeline-item2 below-track" onclick="/lsd.html">
+        <div class="timeline-content2">
+          <div class="timeline-info">
+            <div class="front">
+              <div>
+            <h4>La Science Documentée</h4>
+            <p>Depuis 2021</p>
           </div>
         </div>
             <div class="back">
@@ -251,7 +365,7 @@
             </div>
           </div>
         </div>
-        <div class="bubble">2014</div>
+        <div class="bubble2">2014</div>
       </div>
 
 
@@ -304,6 +418,64 @@
    function showDetails(eventId) {
      const detailsPanel = document.getElementById('details-panel');
 
+     if (eventId == 'these') {
+       detailsPanel.innerHTML = `
+         <h2>Finaliste 'Ma thèse en 180 secondes'</h2>
+         <p>
+         <div class="col-lg-5 col-sm-6">
+           <div style="color:#fff;">
+             <br><br><strong> Mars 2023 </strong>
+           </div>
+         </div>
+         <div class="col-lg-7 col-sm-6">
+           <div class="ratio ratio-16x9">
+           <iframe width="560" height="315" <iframe width="560" height="315" src="https://www.youtube.com/embed/e7VmR0WMBgc?si=ARFEoazereD3tQ6x&amp;start=3422" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                       </div>
+         </div>
+         </p>
+       `;
+     }   if (eventId == 'vaccnam') {
+       detailsPanel.innerHTML = `
+         <h2>Enseignant vacataire</h2>
+         <p>
+         <i>Conservatoire National des Arts et Métiers (CNAM)<br> Paris, France </i><br><br><br>
+          <b> Volume horaire </b> : 60 HETD
+         <br><br> <b> Discipline/ Matières</b> : <br>Bioinformatique structurale
+         <br><br> <b> Nature </b> : Cours magistraux
+         <br><br> <b> Niveau</b> : Equivalence Master
+         </p>
+       `;
+     }     if (eventId == 'vacPS') {
+            detailsPanel.innerHTML = `
+              <h2>Enseignant vacataire</h2>
+              <p>
+              <i>Université Paris-Saclay, Faculté de Pharmacie<br> Paris, France</i><br><br><br>
+               <b> Volume horaire</b> : 64 HETD
+              <br><br> <b> Discipline/ Matières</b> :<br> Chimie Médicinale, Modélisation Moléculaire
+              <br><br> <b> Nature </b> : Travaux pratiques
+              <br><br> <b> Niveau</b> : 3ème année DFGSP3
+              </p>
+            `;
+          }if (eventId == 'bene') {
+                 detailsPanel.innerHTML = `
+                   <h2>Enseignant-Associé Bénévolat</h2>
+                   <p>
+                   <i>Université de Windsor, Faculté d’Informatique<br> Ontario, Canada</i><br><br><br>
+                   <b> Volume horaire</b> : 60 HETD
+                   <br><br> <b> Discipline/ Matières</b> : <br>Informatique, Ingénierie logicielle appliquée
+                   <br><br> <b> Nature </b> : Travaux pratiques
+                   <br><br> <b> Niveau</b> : Master
+                   </p>
+                 `;
+               }if (eventId == 'alz') {
+                      detailsPanel.innerHTML = `
+                        <h2>Ambassadeur pour la fondation Vaincre Alzheimer</h2>
+                        <p>
+                        <i>Paris, France</i><br><br><br>
+                        Créée en avril 2005, la <a href="https://www.vaincrealzheimer.org" target="_blank">Fondation Vaincre Alzheimer </a> trouve son origine au sein de l’association Ligue Européenne Contre la Maladie d’Alzheimer (LECMA).
+                        </p>
+                      `;
+                    }
      if (eventId == 'doc') {
        detailsPanel.innerHTML = `
          <h2>Doctorat en Biochimie et Biologie Moléculaire</h2>

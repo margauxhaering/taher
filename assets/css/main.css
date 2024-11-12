@@ -2037,7 +2037,7 @@ timeline cv
   color: #fff;
   font-weight: bold;
   border-radius: 50%;
-  padding: 20px 20px;
+  padding: 25px 20px;
   display: inline-block;
   position: relative;
   z-index: 1;
@@ -2047,7 +2047,7 @@ timeline cv
 
 .timeline-track {
   position: absolute;
-  top: 70%; 
+  top: 70%;
   left: 0;
   height: 4px;
   width: 100%;
@@ -2106,8 +2106,14 @@ timeline cv
   cursor: pointer;
 }
 
-.timeline-info:hover {
-  transform: rotateY(180deg);
+
+
+.timeline-info:hover .front {
+  opacity: 0;
+}
+
+.timeline-info:hover .back {
+  opacity: 1;
 }
 
 
@@ -2122,21 +2128,28 @@ timeline cv
   border-radius: 8px;
   padding: 15px;
   box-sizing: border-box;
+  transition: opacity 0.5s ease;
+  backface-visibility: hidden;
 }
 
 .front {
   background-color: transparent;
   color: #333;
+  opacity: 1;
+  z-index: 2; /* Met la face avant au-dessus */
 }
 
 .back {
   background-color: #BADAF5;
   color: #fff;
-  transform: rotateY(180deg);
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
+  opacity: 0;
+  z-index: 1;
 }
+
+
 
 
 .timeline-info h4 {
@@ -2218,7 +2231,7 @@ timeline cv
 
 .details-panel .empty {
   color: #aaa;
-  text-align: center;
+  text-align: left;
 }
 
 

@@ -2134,6 +2134,7 @@ timeline cv
 .details-panel p {
   font-size: 16px;
   color: #fff;
+  line-height: 1.5;
 }
 
 .details-panel .empty {

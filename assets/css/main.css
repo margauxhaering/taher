@@ -1487,15 +1487,15 @@ Page Heading Style
 }
 
 .page-heading {
-  background-image: url(../images/bgd.jpg);
+  background-image: url(../images/lsdbg.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding-top: 250px;
+  background-position: center;
+  background-size: contain;
+  padding-top: 300px;
   text-align: center;
   background-color: #2a2a2a;
 }
-
+/*
 .page-heading::before {
   content: "";
   background-image: url('../images/lsd.png');
@@ -1515,7 +1515,7 @@ Page Heading Style
 .page-heading > * {
   position: relative;
   z-index: 2;
-}
+}*/
 
 .page-heading h6 {
   font-size: 20px;
@@ -2301,6 +2301,16 @@ body {
   .foreground {
     display: none;
 }
+
+
+.page-heading {
+  background-image: url(../images/lsdbg.jpg);
+  background-size: cover;
+  padding-top: 200px;
+  text-align: center;
+  background-color: #2a2a2a;
+}
+
 }
 
 @media (max-width: 992px) {

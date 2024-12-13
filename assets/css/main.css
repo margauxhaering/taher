@@ -413,7 +413,7 @@ Header Style
 }
 
 .background-header .main-nav .logo img {
-  width: 180px;
+  width: 158px;
 }
 
 .main-nav h2, h6{
@@ -874,10 +874,7 @@ Categories & Collections Style
 */
 
 .categories-collections {
-  background-image: url(../images/dark-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-color: #24242D;
   padding: 10px 0px 150px 0px;
   position: relative;
 }
@@ -1870,10 +1867,7 @@ Author Page Style
 }
 
 .author-page {
-  background-image: url(../images/dark-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-color: #24242D;
   padding: 200px 0px 120px 0px;
   position: relative;
 }
@@ -2021,7 +2015,7 @@ timeline cv
   display: flex;
   align-items: center;
   position: relative;
-  padding: 20px;
+  padding: 30px;
   overflow-x: auto;
   scroll-behavior: smooth;
 }
